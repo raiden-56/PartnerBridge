@@ -1,0 +1,13 @@
+node_modules
+.next
+.env
+.env.local
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+coverage
+.local-data
+.next-pages
+out-pages
+.local-data-pages
+.claude/settings.local.json
