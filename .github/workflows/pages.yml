@@ -27,7 +27,9 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
+      # npm install (not ci): the lock file is generated on Windows and npm ci on Linux rejects
+      # some platform-specific optional entries.
+      - run: npm install --no-audit --no-fund
       - id: pages
         uses: actions/configure-pages@v5
       - name: Build static preview
